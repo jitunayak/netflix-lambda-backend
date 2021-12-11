@@ -1,0 +1,34 @@
+@baseurl =  https://ct9wxby0v1.execute-api.ap-south-1.amazonaws.com
+@movieid=5aa47842-3c8d-4567-b539-d92ee9085d99
+
+### Upload Movie data
+post {{baseurl}}/movies
+Content-Type: application/json
+
+{
+    "description": "A pregnant woman from a primitive tribal community, searches desperately for her husband, who is missing from police custody. A High Court advocate rises in support to find her husband and seek justice for them.",
+    "genre": "Drama",
+    "title": "Jay Bhim 3" ,
+    "thumbnail": "https://www.livelaw.in/h-upload/2021/11/03/403473-jai-bhim.jpg",
+    "rating": 9.6
+}
+
+### Upload movie data - 2
+post {{baseurl}}/movies
+Content-Type: application/json
+
+{
+    "description": "The Twilight Saga is a series of five vampire-themed romance fantasy films from Summit Entertainment based on the four novels published by author Stephenie Meyer. The films star Kristen Stewart, Robert Pattinson and Taylor Lautner.",
+    "genre": "Fiction",
+    "title": "Twilight" ,
+    "thumbnail": "https://www.denofgeek.com/wp-content/uploads/2021/07/the-twilight-saga-movie-watch-order.jpeg?fit=1280%2C720",
+    "rating": 8.7
+}
+
+
+### Retrieve movie information (Twilight)
+get {{baseurl}}/movies/{{movieid}}
+
+
+### List all movies
+get {{baseurl}}/movies
